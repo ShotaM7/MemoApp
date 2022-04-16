@@ -11,6 +11,7 @@ export default function CircleButton(props) {
   );
 }
 
+// Comment
 CircleButton.propTypes = {
   children: string.isRequired,
 };
