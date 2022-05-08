@@ -9,6 +9,7 @@ export default function MemoListScreen(props) {
   const { navigation } = props;
   useEffect(() => {
     navigation.setOptions({
+      // eslint-disable-next-line react/no-unstable-nested-components
       headerRight: () => <LogOutButton />,
     });
   }, []);

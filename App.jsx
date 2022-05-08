@@ -12,11 +12,16 @@ import SignUpScreen from './src/screens/SignUpScreen';
 
 import { firebaseConfig } from './env';
 
-const Stack = createStackNavigator();
-
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
+
+require('firebase/firestore');
+
+const Stack = createStackNavigator();
+
+// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
+// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
 
 export default function App() {
   return (
